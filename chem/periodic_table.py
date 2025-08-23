@@ -192,7 +192,7 @@ class Reaction:
 
 
 class PeriodicTable:
-    class H:
+    class H(Element):
         atomic_number = 1
         symbol = "H"
         name = "Hydrogen"
@@ -207,7 +207,7 @@ class PeriodicTable:
         electronegativity = 2.20
         oxidation_states = [-1, +1]
 
-    class He:
+    class He(Element):
         atomic_number = 2
         symbol = "He"
         name = "Helium"
@@ -222,7 +222,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [0]
 
-    class Li:
+    class Li(Element):
         atomic_number = 3
         symbol = "Li"
         name = "Lithium"
@@ -237,7 +237,7 @@ class PeriodicTable:
         electronegativity = 0.98
         oxidation_states = [+1]
 
-    class Be:
+    class Be(Element):
         atomic_number = 4
         symbol = "Be"
         name = "Beryllium"
@@ -252,7 +252,7 @@ class PeriodicTable:
         electronegativity = 1.57
         oxidation_states = [+2]
 
-    class B:
+    class B(Element):
         atomic_number = 5
         symbol = "B"
         name = "Boron"
@@ -267,7 +267,7 @@ class PeriodicTable:
         electronegativity = 2.04
         oxidation_states = [+3]
 
-    class C:
+    class C(Element):
         atomic_number = 6
         symbol = "C"
         name = "Carbon"
@@ -282,7 +282,7 @@ class PeriodicTable:
         electronegativity = 2.55
         oxidation_states = [-4, +2, +4]
 
-    class N:
+    class N(Element):
         atomic_number = 7
         symbol = "N"
         name = "Nitrogen"
@@ -297,7 +297,7 @@ class PeriodicTable:
         electronegativity = 3.04
         oxidation_states = [-3, +3, +5]
 
-    class O:
+    class O(Element):
         atomic_number = 8
         symbol = "O"
         name = "Oxygen"
@@ -312,7 +312,7 @@ class PeriodicTable:
         electronegativity = 3.44
         oxidation_states = [-2]
 
-    class F:
+    class F(Element):
         atomic_number = 9
         symbol = "F"
         name = "Fluorine"
@@ -327,7 +327,7 @@ class PeriodicTable:
         electronegativity = 3.98
         oxidation_states = [-1]
 
-    class Ne:
+    class Ne(Element):
         atomic_number = 10
         symbol = "Ne"
         name = "Neon"
@@ -342,7 +342,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [0]
 
-    class Na:
+    class Na(Element):
         atomic_number = 11
         symbol = "Na"
         name = "Sodium"
@@ -357,7 +357,7 @@ class PeriodicTable:
         electronegativity = 0.93
         oxidation_states = [+1]
 
-    class Mg:
+    class Mg(Element):
         atomic_number = 12
         symbol = "Mg"
         name = "Magnesium"
@@ -372,7 +372,7 @@ class PeriodicTable:
         electronegativity = 1.31
         oxidation_states = [+2]
 
-    class Al:
+    class Al(Element):
         atomic_number = 13
         symbol = "Al"
         name = "Aluminium"
@@ -387,7 +387,7 @@ class PeriodicTable:
         electronegativity = 1.61
         oxidation_states = [+3]
 
-    class Si:
+    class Si(Element):
         atomic_number = 14
         symbol = "Si"
         name = "Silicon"
@@ -402,7 +402,7 @@ class PeriodicTable:
         electronegativity = 1.90
         oxidation_states = [-4, +2, +4]
 
-    class P:
+    class P(Element):
         atomic_number = 15
         symbol = "P"
         name = "Phosphorus"
@@ -417,7 +417,7 @@ class PeriodicTable:
         electronegativity = 2.19
         oxidation_states = [-3, +3, +5]
 
-    class S:
+    class S(Element):
         atomic_number = 16
         symbol = "S"
         name = "Sulfur"
@@ -432,7 +432,7 @@ class PeriodicTable:
         electronegativity = 2.58
         oxidation_states = [-2, +4, +6]
 
-    class Cl:
+    class Cl(Element):
         atomic_number = 17
         symbol = "Cl"
         name = "Chlorine"
@@ -447,7 +447,7 @@ class PeriodicTable:
         electronegativity = 3.16
         oxidation_states = [-1, +1, +3, +5, +7]
 
-    class Ar:
+    class Ar(Element):
         atomic_number = 18
         symbol = "Ar"
         name = "Argon"
@@ -462,7 +462,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [0]
 
-    class K:
+    class K(Element):
         atomic_number = 19
         symbol = "K"
         name = "Potassium"
@@ -477,7 +477,7 @@ class PeriodicTable:
         electronegativity = 0.82
         oxidation_states = [+1]
 
-    class Ca:
+    class Ca(Element):
         atomic_number = 20
         symbol = "Ca"
         name = "Calcium"
@@ -492,7 +492,7 @@ class PeriodicTable:
         electronegativity = 1.00
         oxidation_states = [+2]
 
-    class Sc:
+    class Sc(Element):
         atomic_number = 21
         symbol = "Sc"
         name = "Scandium"
@@ -507,7 +507,7 @@ class PeriodicTable:
         electronegativity = 1.36
         oxidation_states = [+3]
 
-    class Ti:
+    class Ti(Element):
         atomic_number = 22
         symbol = "Ti"
         name = "Titanium"
@@ -522,7 +522,7 @@ class PeriodicTable:
         electronegativity = 1.54
         oxidation_states = [+2, +3, +4]
 
-    class V:
+    class V(Element):
         atomic_number = 23
         symbol = "V"
         name = "Vanadium"
@@ -537,7 +537,7 @@ class PeriodicTable:
         electronegativity = 1.63
         oxidation_states = [+2, +3, +4, +5]
 
-    class Cr:
+    class Cr(Element):
         atomic_number = 24
         symbol = "Cr"
         name = "Chromium"
@@ -552,7 +552,7 @@ class PeriodicTable:
         electronegativity = 1.66
         oxidation_states = [+2, +3, +6]
 
-    class Mn:
+    class Mn(Element):
         atomic_number = 25
         symbol = "Mn"
         name = "Manganese"
@@ -567,7 +567,7 @@ class PeriodicTable:
         electronegativity = 1.55
         oxidation_states = [+2, +3, +4, +6, +7]
 
-    class Fe:
+    class Fe(Element):
         atomic_number = 26
         symbol = "Fe"
         name = "Iron"
@@ -582,7 +582,7 @@ class PeriodicTable:
         electronegativity = 1.83
         oxidation_states = [+2, +3]
 
-    class Co:
+    class Co(Element):
         atomic_number = 27
         symbol = "Co"
         name = "Cobalt"
@@ -597,7 +597,7 @@ class PeriodicTable:
         electronegativity = 1.88
         oxidation_states = [+2, +3]
 
-    class Ni:
+    class Ni(Element):
         atomic_number = 28
         symbol = "Ni"
         name = "Nickel"
@@ -612,7 +612,7 @@ class PeriodicTable:
         electronegativity = 1.91
         oxidation_states = [+2, +3]
 
-    class Cu:
+    class Cu(Element):
         atomic_number = 29
         symbol = "Cu"
         name = "Copper"
@@ -627,7 +627,7 @@ class PeriodicTable:
         electronegativity = 1.90
         oxidation_states = [+1, +2]
 
-    class Zn:
+    class Zn(Element):
         atomic_number = 30
         symbol = "Zn"
         name = "Zinc"
@@ -642,7 +642,7 @@ class PeriodicTable:
         electronegativity = 1.65
         oxidation_states = [+2]
 
-    class Ga:
+    class Ga(Element):
         atomic_number = 31
         symbol = "Ga"
         name = "Gallium"
@@ -657,7 +657,7 @@ class PeriodicTable:
         electronegativity = 1.81
         oxidation_states = [+3]
 
-    class Ge:
+    class Ge(Element):
         atomic_number = 32
         symbol = "Ge"
         name = "Germanium"
@@ -672,7 +672,7 @@ class PeriodicTable:
         electronegativity = 2.01
         oxidation_states = [+2, +4]
 
-    class As:
+    class As(Element):
         atomic_number = 33
         symbol = "As"
         name = "Arsenic"
@@ -687,7 +687,7 @@ class PeriodicTable:
         electronegativity = 2.18
         oxidation_states = [-3, +3, +5]
 
-    class Se:
+    class Se(Element):
         atomic_number = 34
         symbol = "Se"
         name = "Selenium"
@@ -702,7 +702,7 @@ class PeriodicTable:
         electronegativity = 2.55
         oxidation_states = [-2, +4, +6]
 
-    class Br:
+    class Br(Element):
         atomic_number = 35
         symbol = "Br"
         name = "Bromine"
@@ -717,7 +717,7 @@ class PeriodicTable:
         electronegativity = 2.96
         oxidation_states = [-1, +1, +3, +5]
 
-    class Kr:
+    class Kr(Element):
         atomic_number = 36
         symbol = "Kr"
         name = "Krypton"
@@ -732,7 +732,7 @@ class PeriodicTable:
         electronegativity = 3.00
         oxidation_states = [0]
 
-    class Rb:
+    class Rb(Element):
         atomic_number = 37
         symbol = "Rb"
         name = "Rubidium"
@@ -747,7 +747,7 @@ class PeriodicTable:
         electronegativity = 0.82
         oxidation_states = [+1]
 
-    class Sr:
+    class Sr(Element):
         atomic_number = 38
         symbol = "Sr"
         name = "Strontium"
@@ -762,7 +762,7 @@ class PeriodicTable:
         electronegativity = 0.95
         oxidation_states = [+2]
 
-    class Y:
+    class Y(Element):
         atomic_number = 39
         symbol = "Y"
         name = "Yttrium"
@@ -777,7 +777,7 @@ class PeriodicTable:
         electronegativity = 1.22
         oxidation_states = [+3]
 
-    class Zr:
+    class Zr(Element):
         atomic_number = 40
         symbol = "Zr"
         name = "Zirconium"
@@ -792,7 +792,7 @@ class PeriodicTable:
         electronegativity = 1.33
         oxidation_states = [+4]
 
-    class Nb:
+    class Nb(Element):
         atomic_number = 41
         symbol = "Nb"
         name = "Niobium"
@@ -807,7 +807,7 @@ class PeriodicTable:
         electronegativity = 1.6
         oxidation_states = [+3, +5]
 
-    class Mo:
+    class Mo(Element):
         atomic_number = 42
         symbol = "Mo"
         name = "Molybdenum"
@@ -822,7 +822,7 @@ class PeriodicTable:
         electronegativity = 2.16
         oxidation_states = [+4, +6]
 
-    class Tc:
+    class Tc(Element):
         atomic_number = 43
         symbol = "Tc"
         name = "Technetium"
@@ -837,7 +837,7 @@ class PeriodicTable:
         electronegativity = 1.9
         oxidation_states = [+4, +7]
 
-    class Ru:
+    class Ru(Element):
         atomic_number = 44
         symbol = "Ru"
         name = "Ruthenium"
@@ -852,7 +852,7 @@ class PeriodicTable:
         electronegativity = 2.2
         oxidation_states = [+3, +4, +8]
 
-    class Rh:
+    class Rh(Element):
         atomic_number = 45
         symbol = "Rh"
         name = "Rhodium"
@@ -867,7 +867,7 @@ class PeriodicTable:
         electronegativity = 2.28
         oxidation_states = [+3]
 
-    class Pd:
+    class Pd(Element):
         atomic_number = 46
         symbol = "Pd"
         name = "Palladium"
@@ -882,7 +882,7 @@ class PeriodicTable:
         electronegativity = 2.20
         oxidation_states = [+2, +4]
 
-    class Ag:
+    class Ag(Element):
         atomic_number = 47
         symbol = "Ag"
         name = "Silver"
@@ -897,7 +897,7 @@ class PeriodicTable:
         electronegativity = 1.93
         oxidation_states = [+1]
 
-    class Cd:
+    class Cd(Element):
         atomic_number = 48
         symbol = "Cd"
         name = "Cadmium"
@@ -912,7 +912,7 @@ class PeriodicTable:
         electronegativity = 1.69
         oxidation_states = [+2]
 
-    class In:
+    class In(Element):
         atomic_number = 49
         symbol = "In"
         name = "Indium"
@@ -927,7 +927,7 @@ class PeriodicTable:
         electronegativity = 1.78
         oxidation_states = [+3]
 
-    class Sn:
+    class Sn(Element):
         atomic_number = 50
         symbol = "Sn"
         name = "Tin"
@@ -942,7 +942,7 @@ class PeriodicTable:
         electronegativity = 1.96
         oxidation_states = [+2, +4]
 
-    class Sb:
+    class Sb(Element):
         atomic_number = 51
         symbol = "Sb"
         name = "Antimony"
@@ -957,7 +957,7 @@ class PeriodicTable:
         electronegativity = 2.05
         oxidation_states = [-3, +3, +5]
 
-    class Te:
+    class Te(Element):
         atomic_number = 52
         symbol = "Te"
         name = "Tellurium"
@@ -972,7 +972,7 @@ class PeriodicTable:
         electronegativity = 2.1
         oxidation_states = [-2, +4, +6]
 
-    class I:
+    class I(Element):
         atomic_number = 53
         symbol = "I"
         name = "Iodine"
@@ -987,7 +987,7 @@ class PeriodicTable:
         electronegativity = 2.66
         oxidation_states = [-1, +1, +3, +5, +7]
 
-    class Xe:
+    class Xe(Element):
         atomic_number = 54
         symbol = "Xe"
         name = "Xenon"
@@ -1002,7 +1002,7 @@ class PeriodicTable:
         electronegativity = 2.6
         oxidation_states = [0, +2, +4, +6, +8]
 
-    class Cs:
+    class Cs(Element):
         atomic_number = 55
         symbol = "Cs"
         name = "Caesium"
@@ -1017,7 +1017,7 @@ class PeriodicTable:
         electronegativity = 0.79
         oxidation_states = [+1]
 
-    class Ba:
+    class Ba(Element):
         atomic_number = 56
         symbol = "Ba"
         name = "Barium"
@@ -1032,7 +1032,7 @@ class PeriodicTable:
         electronegativity = 0.89
         oxidation_states = [+2]
 
-    class La:
+    class La(Element):
         atomic_number = 57
         symbol = "La"
         name = "Lanthanum"
@@ -1047,7 +1047,7 @@ class PeriodicTable:
         electronegativity = 1.10
         oxidation_states = [+3]
 
-    class Ce:
+    class Ce(Element):
         atomic_number = 58
         symbol = "Ce"
         name = "Cerium"
@@ -1062,7 +1062,7 @@ class PeriodicTable:
         electronegativity = 1.12
         oxidation_states = [+3, +4]
 
-    class Pr:
+    class Pr(Element):
         atomic_number = 59
         symbol = "Pr"
         name = "Praseodymium"
@@ -1077,7 +1077,7 @@ class PeriodicTable:
         electronegativity = 1.13
         oxidation_states = [+3, +4]
 
-    class Nd:
+    class Nd(Element):
         atomic_number = 60
         symbol = "Nd"
         name = "Neodymium"
@@ -1092,7 +1092,7 @@ class PeriodicTable:
         electronegativity = 1.14
         oxidation_states = [+3]
 
-    class Pm:
+    class Pm(Element):
         atomic_number = 61
         symbol = "Pm"
         name = "Promethium"
@@ -1107,7 +1107,7 @@ class PeriodicTable:
         electronegativity = 1.13
         oxidation_states = [+3]
 
-    class Sm:
+    class Sm(Element):
         atomic_number = 62
         symbol = "Sm"
         name = "Samarium"
@@ -1122,7 +1122,7 @@ class PeriodicTable:
         electronegativity = 1.17
         oxidation_states = [+2, +3]
 
-    class Eu:
+    class Eu(Element):
         atomic_number = 63
         symbol = "Eu"
         name = "Europium"
@@ -1137,7 +1137,7 @@ class PeriodicTable:
         electronegativity = 1.20
         oxidation_states = [+2, +3]
 
-    class Gd:
+    class Gd(Element):
         atomic_number = 64
         symbol = "Gd"
         name = "Gadolinium"
@@ -1152,7 +1152,7 @@ class PeriodicTable:
         electronegativity = 1.20
         oxidation_states = [+3]
 
-    class Tb:
+    class Tb(Element):
         atomic_number = 65
         symbol = "Tb"
         name = "Terbium"
@@ -1167,7 +1167,7 @@ class PeriodicTable:
         electronegativity = 1.10
         oxidation_states = [+3, +4]
 
-    class Dy:
+    class Dy(Element):
         atomic_number = 66
         symbol = "Dy"
         name = "Dysprosium"
@@ -1182,7 +1182,7 @@ class PeriodicTable:
         electronegativity = 1.22
         oxidation_states = [+3]
 
-    class Ho:
+    class Ho(Element):
         atomic_number = 67
         symbol = "Ho"
         name = "Holmium"
@@ -1197,7 +1197,7 @@ class PeriodicTable:
         electronegativity = 1.23
         oxidation_states = [+3]
 
-    class Er:
+    class Er(Element):
         atomic_number = 68
         symbol = "Er"
         name = "Erbium"
@@ -1212,7 +1212,7 @@ class PeriodicTable:
         electronegativity = 1.24
         oxidation_states = [+3]
 
-    class Tm:
+    class Tm(Element):
         atomic_number = 69
         symbol = "Tm"
         name = "Thulium"
@@ -1227,7 +1227,7 @@ class PeriodicTable:
         electronegativity = 1.25
         oxidation_states = [+3]
 
-    class Yb:
+    class Yb(Element):
         atomic_number = 70
         symbol = "Yb"
         name = "Ytterbium"
@@ -1242,7 +1242,7 @@ class PeriodicTable:
         electronegativity = 1.10
         oxidation_states = [+2, +3]
 
-    class Lu:
+    class Lu(Element):
         atomic_number = 71
         symbol = "Lu"
         name = "Lutetium"
@@ -1257,7 +1257,7 @@ class PeriodicTable:
         electronegativity = 1.27
         oxidation_states = [+3]
 
-    class Hf:
+    class Hf(Element):
         atomic_number = 72
         symbol = "Hf"
         name = "Hafnium"
@@ -1272,7 +1272,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+4]
 
-    class Ta:
+    class Ta(Element):
         atomic_number = 73
         symbol = "Ta"
         name = "Tantalum"
@@ -1287,7 +1287,7 @@ class PeriodicTable:
         electronegativity = 1.5
         oxidation_states = [+5]
 
-    class W:
+    class W(Element):
         atomic_number = 74
         symbol = "W"
         name = "Tungsten"
@@ -1302,7 +1302,7 @@ class PeriodicTable:
         electronegativity = 2.36
         oxidation_states = [+6]
 
-    class Re:
+    class Re(Element):
         atomic_number = 75
         symbol = "Re"
         name = "Rhenium"
@@ -1317,7 +1317,7 @@ class PeriodicTable:
         electronegativity = 1.9
         oxidation_states = [+4, +7]
 
-    class Os:
+    class Os(Element):
         atomic_number = 76
         symbol = "Os"
         name = "Osmium"
@@ -1332,7 +1332,7 @@ class PeriodicTable:
         electronegativity = 2.2
         oxidation_states = [+4, +6, +8]
 
-    class Ir:
+    class Ir(Element):
         atomic_number = 77
         symbol = "Ir"
         name = "Iridium"
@@ -1347,7 +1347,7 @@ class PeriodicTable:
         electronegativity = 2.20
         oxidation_states = [+3, +4, +6]
 
-    class Pt:
+    class Pt(Element):
         atomic_number = 78
         symbol = "Pt"
         name = "Platinum"
@@ -1362,7 +1362,7 @@ class PeriodicTable:
         electronegativity = 2.28
         oxidation_states = [+2, +4]
 
-    class Au:
+    class Au(Element):
         atomic_number = 79
         symbol = "Au"
         name = "Gold"
@@ -1377,7 +1377,7 @@ class PeriodicTable:
         electronegativity = 2.54
         oxidation_states = [+1, +3]
 
-    class Hg:
+    class Hg(Element):
         atomic_number = 80
         symbol = "Hg"
         name = "Mercury"
@@ -1392,7 +1392,7 @@ class PeriodicTable:
         electronegativity = 2.00
         oxidation_states = [+1, +2]
 
-    class Tl:
+    class Tl(Element):
         atomic_number = 81
         symbol = "Tl"
         name = "Thallium"
@@ -1407,7 +1407,7 @@ class PeriodicTable:
         electronegativity = 1.62
         oxidation_states = [+1, +3]
 
-    class Pb:
+    class Pb(Element):
         atomic_number = 82
         symbol = "Pb"
         name = "Lead"
@@ -1422,7 +1422,7 @@ class PeriodicTable:
         electronegativity = 2.33
         oxidation_states = [+2, +4]
 
-    class Bi:
+    class Bi(Element):
         atomic_number = 83
         symbol = "Bi"
         name = "Bismuth"
@@ -1437,7 +1437,7 @@ class PeriodicTable:
         electronegativity = 2.02
         oxidation_states = [+3, +5]
 
-    class Po:
+    class Po(Element):
         atomic_number = 84
         symbol = "Po"
         name = "Polonium"
@@ -1452,7 +1452,7 @@ class PeriodicTable:
         electronegativity = 2.0
         oxidation_states = [-2, +2, +4, +6]
 
-    class At:
+    class At(Element):
         atomic_number = 85
         symbol = "At"
         name = "Astatine"
@@ -1467,7 +1467,7 @@ class PeriodicTable:
         electronegativity = 2.2
         oxidation_states = [-1, +1, +3, +5, +7]
 
-    class Rn:
+    class Rn(Element):
         atomic_number = 86
         symbol = "Rn"
         name = "Radon"
@@ -1482,7 +1482,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [0]
 
-    class Fr:
+    class Fr(Element):
         atomic_number = 87
         symbol = "Fr"
         name = "Francium"
@@ -1497,7 +1497,7 @@ class PeriodicTable:
         electronegativity = 0.7
         oxidation_states = [+1]
 
-    class Ra:
+    class Ra(Element):
         atomic_number = 88
         symbol = "Ra"
         name = "Radium"
@@ -1512,7 +1512,7 @@ class PeriodicTable:
         electronegativity = 0.9
         oxidation_states = [+2]
 
-    class Ac:
+    class Ac(Element):
         atomic_number = 89
         symbol = "Ac"
         name = "Actinium"
@@ -1527,7 +1527,7 @@ class PeriodicTable:
         electronegativity = 1.1
         oxidation_states = [+3]
 
-    class Th:
+    class Th(Element):
         atomic_number = 90
         symbol = "Th"
         name = "Thorium"
@@ -1542,7 +1542,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+4]
 
-    class Pa:
+    class Pa(Element):
         atomic_number = 91
         symbol = "Pa"
         name = "Protactinium"
@@ -1557,7 +1557,7 @@ class PeriodicTable:
         electronegativity = 1.5
         oxidation_states = [+5]
 
-    class U:
+    class U(Element):
         atomic_number = 92
         symbol = "U"
         name = "Uranium"
@@ -1572,7 +1572,7 @@ class PeriodicTable:
         electronegativity = 1.38
         oxidation_states = [+3, +4, +5, +6]
 
-    class Np:
+    class Np(Element):
         atomic_number = 93
         symbol = "Np"
         name = "Neptunium"
@@ -1587,7 +1587,7 @@ class PeriodicTable:
         electronegativity = 1.36
         oxidation_states = [+3, +4, +5, +6, +7]
 
-    class Pu:
+    class Pu(Element):
         atomic_number = 94
         symbol = "Pu"
         name = "Plutonium"
@@ -1602,7 +1602,7 @@ class PeriodicTable:
         electronegativity = 1.28
         oxidation_states = [+3, +4, +5, +6]
 
-    class Am:
+    class Am(Element):
         atomic_number = 95
         symbol = "Am"
         name = "Americium"
@@ -1617,7 +1617,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+3, +4, +6]
 
-    class Cm:
+    class Cm(Element):
         atomic_number = 96
         symbol = "Cm"
         name = "Curium"
@@ -1632,7 +1632,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+3, +4]
 
-    class Bk:
+    class Bk(Element):
         atomic_number = 97
         symbol = "Bk"
         name = "Berkelium"
@@ -1647,7 +1647,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+3, +4]
 
-    class Cf:
+    class Cf(Element):
         atomic_number = 98
         symbol = "Cf"
         name = "Californium"
@@ -1662,7 +1662,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+3, +4]
 
-    class Es:
+    class Es(Element):
         atomic_number = 99
         symbol = "Es"
         name = "Einsteinium"
@@ -1677,7 +1677,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+3]
 
-    class Fm:
+    class Fm(Element):
         atomic_number = 100
         symbol = "Fm"
         name = "Fermium"
@@ -1692,7 +1692,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+3]
 
-    class Md:
+    class Md(Element):
         atomic_number = 101
         symbol = "Md"
         name = "Mendelevium"
@@ -1707,7 +1707,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+2, +3]
 
-    class No:
+    class No(Element):
         atomic_number = 102
         symbol = "No"
         name = "Nobelium"
@@ -1722,7 +1722,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+2, +3]
 
-    class Lr:
+    class Lr(Element):
         atomic_number = 103
         symbol = "Lr"
         name = "Lawrencium"
@@ -1737,7 +1737,7 @@ class PeriodicTable:
         electronegativity = 1.3
         oxidation_states = [+3]
 
-    class Rf:
+    class Rf(Element):
         atomic_number = 104
         symbol = "Rf"
         name = "Rutherfordium"
@@ -1752,7 +1752,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+4]
 
-    class Db:
+    class Db(Element):
         atomic_number = 105
         symbol = "Db"
         name = "Dubnium"
@@ -1767,7 +1767,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+5]
 
-    class Sg:
+    class Sg(Element):
         atomic_number = 106
         symbol = "Sg"
         name = "Seaborgium"
@@ -1782,7 +1782,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+6]
 
-    class Bh:
+    class Bh(Element):
         atomic_number = 107
         symbol = "Bh"
         name = "Bohrium"
@@ -1797,7 +1797,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+7]
 
-    class Hs:
+    class Hs(Element):
         atomic_number = 108
         symbol = "Hs"
         name = "Hassium"
@@ -1812,7 +1812,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+8]
 
-    class Mt:
+    class Mt(Element):
         atomic_number = 109
         symbol = "Mt"
         name = "Meitnerium"
@@ -1827,7 +1827,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+1, +3]
 
-    class Ds:
+    class Ds(Element):
         atomic_number = 110
         symbol = "Ds"
         name = "Darmstadtium"
@@ -1842,7 +1842,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+2, +4]
 
-    class Rg:
+    class Rg(Element):
         atomic_number = 111
         symbol = "Rg"
         name = "Roentgenium"
@@ -1857,7 +1857,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+1, +3]
 
-    class Cn:
+    class Cn(Element):
         atomic_number = 112
         symbol = "Cn"
         name = "Copernicium"
@@ -1872,7 +1872,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+2, +4]
 
-    class Nh:
+    class Nh(Element):
         atomic_number = 113
         symbol = "Nh"
         name = "Nihonium"
@@ -1887,7 +1887,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+1, +3]
 
-    class Fl:
+    class Fl(Element):
         atomic_number = 114
         symbol = "Fl"
         name = "Flerovium"
@@ -1902,7 +1902,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+2, +4]
 
-    class Mc:
+    class Mc(Element):
         atomic_number = 115
         symbol = "Mc"
         name = "Moscovium"
@@ -1917,7 +1917,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+1, +3, +5]
 
-    class Lv:
+    class Lv(Element):
         atomic_number = 116
         symbol = "Lv"
         name = "Livermorium"
@@ -1932,7 +1932,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [+2, +4, +6]
 
-    class Ts:
+    class Ts(Element):
         atomic_number = 117
         symbol = "Ts"
         name = "Tennessine"
@@ -1947,7 +1947,7 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [-1, +1, +3, +5, +7]
 
-    class Og:
+    class Og(Element):
         atomic_number = 118
         symbol = "Og"
         name = "Oganesson"
@@ -1962,27 +1962,24 @@ class PeriodicTable:
         electronegativity = None
         oxidation_states = [0]
 
-
-
-
-
+PT = PeriodicTable
 H2O = Molekyle(
-    PeriodicTable.H(2),
-    PeriodicTable.O(1),
+    PT.H(2),
+    PT.O(1),
 )
-O2 = PeriodicTable.O(2)
-OH = Molekyle(PeriodicTable.O(), PeriodicTable.H())
-H = PeriodicTable.H()
-Na = PeriodicTable.Na()
-SO4 = Molekyle(PeriodicTable.O(4), PeriodicTable.S())
-Na2SO4 = Molekyle(PeriodicTable.Na(2), PeriodicTable.S(), PeriodicTable.O(4))
-CO2 = Molekyle(PeriodicTable.C(), PeriodicTable.O(2))
-C6H12O6 = Molekyle(PeriodicTable.C(6), PeriodicTable.H(12), PeriodicTable.O(6))
-SO3 = Molekyle(PeriodicTable.S(), PeriodicTable.O(3))
-SO2 = Molekyle(PeriodicTable.S(), PeriodicTable.O(2))
-NH3 = Molekyle(PeriodicTable.N(), PeriodicTable.H(3))
-N2 = PeriodicTable.N(2)
-H2 = PeriodicTable.H(2)
+O2 = PT.O(2)
+OH = Molekyle(PT.O(), PT.H())
+H = PT.H()
+Na = PT.Na()
+SO4 = Molekyle(PT.O(4), PT.S())
+Na2SO4 = Molekyle(PT.Na(2), PT.S(), PT.O(4))
+CO2 = Molekyle(PT.C(), PT.O(2))
+C6H12O6 = Molekyle(PT.C(6), PT.H(12), PT.O(6))
+SO3 = Molekyle(PT.S(), PT.O(3))
+SO2 = Molekyle(PT.S(), PT.O(2))
+NH3 = Molekyle(PT.N(), PT.H(3))
+N2 = PT.N(2)
+H2 = PT.H(2)
 
 THERMO_TABLE = {
     O2: {
