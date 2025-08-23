@@ -25,12 +25,11 @@ class IdealGasLaw(Formula):
     T: TYPE
 
     def __init__(self, *, p=None, V=None, n=None, R=Constants.R_L, T=None):
-        symbols = sp.symbols("p V n R T")
-        values = [p, V, n, R, T]
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip("pVnRT", symbols, values)}
+        super().__init__(p, V, n, R, T)
 
-        v = self._vars
-        self.formula = v["n"] * v["R"] * v["T"] - v["p"] * v["V"]
+        p, V, n, R, T = self.symbols
+
+        self.formula = p*V - n*R*T
 
 
 class CoulombsLaw(Formula):
@@ -52,12 +51,11 @@ class CoulombsLaw(Formula):
     r: TYPE
 
     def __init__(self, *, F_e=None, k_e=Constants.k_e, q1=None, q2=None, r=None):
-        symbols = sp.symbols("F_e k_e q1 q2 r")
-        values = [F_e, k_e, q1, q2, r]
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip(["F_e", "k_e", "q1", "q2", "r"], symbols, values)}
+        super().__init__(F_e, k_e, q1, q2, r)
 
-        v = self._vars
-        self.formula = v["k_e"] * sp.Abs(v["q1"] * v["q2"]) / (v["r"]**2) - v["F_e"]
+        F_e, k_e, q1, q2, r = self.symbols
+
+        self.formula = F_e - k_e * sp.Abs(q1 * q2) / r**2
 
 
 class Molarity(Formula):
@@ -75,12 +73,11 @@ class Molarity(Formula):
     V: TYPE
 
     def __init__(self, *, M=None, moles=None, V=None):
-        symbols = sp.symbols("M moles V")
-        values = [M, moles, V]
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip(["M", "moles", "V"], symbols, values)}
+        super().__init__(M, moles, V)
 
-        v = self._vars
-        self.formula = v["moles"] / v["V"] - v["M"]
+        M, moles, V = self.symbols
+
+        self.formula = M - moles / V
 
 
 class Diluting(Formula):
@@ -98,12 +95,11 @@ class Diluting(Formula):
     V_2: TYPE
 
     def __init__(self, *, M_1=None, V_1=None, M_2=None, V_2=None):
-        symbols = sp.symbols("M_1 V_1 M_2 V_2")
-        values = [M_1, V_1, M_2, V_2]
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip(["M_1", "V_1", "M_2", "V_2"], symbols, values)}
+        super().__init__(M_1, V_1, M_2, V_2)
 
-        v = self._vars
-        self.formula = v["M_1"] * v["V_1"] - v["M_2"] * v["V_2"]
+        M_1, V_1, M_2, V_2 = self.symbols
+
+        self.formula = M_1 * V_1 - M_2 * V_2
 
 
 class BoylesLaw(Formula):
@@ -121,12 +117,11 @@ class BoylesLaw(Formula):
     V_2: TYPE
 
     def __init__(self, *, P_1=None, V_1=None, P_2=None, V_2=None):
-        symbols = sp.symbols("P_1 V_1 P_2 V_2")
-        values = [P_1, V_1, P_2, V_2]
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip(["P_1", "V_1", "P_2", "V_2"], symbols, values)}
+        super().__init__(P_1, V_1, P_2, V_2)
 
-        v = self._vars
-        self.formula = v[P_1] * v[V_1] - v[P_2] * v[V_2]
+        P_1, V_1, P_2, V_2 = self.symbols
+
+        self.formula = P_1 * V_1 - P_2 * V_2
 
 
 class Kelvin(Formula):
@@ -142,12 +137,11 @@ class Kelvin(Formula):
     C: TYPE
 
     def __init__(self, *, K=None, C=None):
-        symbols = sp.symbols("K C")
-        values = [K, C]
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip(["K", "C"], symbols, values)}
+        super().__init__(K, C)
 
-        v = self._vars
-        self.formula = v["C"] + 273.15 - v["K"]
+        K, C = self.symbols
+
+        self.formula = K - (C + 273.15)
 
 
 class CharlesLaw(Formula):
@@ -165,13 +159,11 @@ class CharlesLaw(Formula):
     T_2: TYPE
 
     def __init__(self, *, V_1=None, T_1=None, V_2=None, T_2=None):
-        symbols = sp.symbols("V_1 T_1 V_2 T_2")
-        values = [V_1, T_1, V_2, T_2]
+        super().__init__(V_1, T_1, V_2, T_2)
 
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip(["V_1", "T_1", "V_2", "T_2"], symbols, values)}
+        V_1, T_1, V_2, T_2 = self.symbols
 
-        v = self._vars
-        self.formula = v['V_1'] / v['T_1'] - v['V_2'] / v['T_2']
+        self.formula = V_1 / T_1 - V_2 / T_2
 
 
 class CombinedGasLaw(Formula):
@@ -192,13 +184,11 @@ class CombinedGasLaw(Formula):
     T_2: TYPE
 
     def __init__(self, *, P_1=None, V_1=None, T_1=None, P_2=None, V_2=None, T_2=None):
-        symbols = sp.symbols("P_1 V_1 T_1 P_2 V_2 T_2")
-        values = [P_1, V_1, T_1, P_2, V_2, T_2]
+        super().__init__(P_1, V_1, T_1, P_2, V_2, T_2)
 
-        self._vars = {name: Variable(sym, val) for name, sym, val in zip(['P_1', 'V_1', 'T_1', 'P_2', 'V_2', 'T_2'], symbols, values)}
+        P_1, V_1, T_1, P_2, V_2, T_2 = self.symbols
 
-        v = self._vars
-        self.formula = v['P_1'] * v['V_1'] / v['T_1'] - v['P_2'] * v['V_2'] / v['T_2']
+        self.formula = P_1 * V_1 / T_1 - P_2 * V_2 / T_2
 
 
 class AvogadrosLaw(Formula):
@@ -216,13 +206,11 @@ class AvogadrosLaw(Formula):
     V_2: TYPE
 
     def __init__(self, *, n_1=None, V_1=None, n_2=None, V_2=None):
-        symbols = sp.symbols("n_1 V_1 n_2 V_2")
-        values = [n_1, V_1, n_2, V_2]
-        self._vars = {name: Variable(sym, val) for name, sym, val in
-                      zip(['n_1', 'V_1', 'n_2', 'V_2'], symbols, values)}
+        super().__init__(n_1, V_1, n_2, V_2)
 
-        v = self._vars
-        self.formula = v['n_1'] / v['V_1'] - v['n_2'] / v['V_2']
+        n_1, V_1, n_2, V_2 = self.symbols
+
+        self.formula = n_1 / V_1 - n_2 / V_2
 
 
 class KineticEnergy(Formula):
@@ -240,63 +228,56 @@ class KineticEnergy(Formula):
     v: TYPE
 
     def __init__(self, *, E_k=None, m=None, v=None):
-        symbols = sp.symbols("E_k m v")
-        values = [E_k, m, v]
+        super().__init__(E_k, m, v)
 
-        self._vars = {name: Variable(sym, val) for name, sym, val in
-                      zip(['E_k', 'm', 'v'], symbols, values)}
+        E_k, m, v = self.symbols
 
-        v = self._vars
-        self.formula = 1/2 * v['m'] * v['v'] - v['E_k']
+        self.formula = E_k - (1/2 * m * v**2)
 
 
 class MostProbableSpeed(Formula):
     """
     **Most Probable Speed**::
 
-        u_mp = sqrt(2·R·T/molar mass)
+        u_mp = sqrt(2·R·T/M)
 
         u_mp       : Most Probable Speed (m/s)
         R          : Ideal gas constant  (J/mol·K)
         T          : Temperature         (K)
-        molar mass : Molar mass          (kg/mol)
+        M : Molar mass          (kg/mol)
     """
     u_mp: TYPE
     R: TYPE
     T: TYPE
     molar_mass: TYPE
 
-    def __init__(self, *, u_mp=None, R=Constants.R_J, T=None, Molar_mass=None):
-        symbols = sp.symbols("u_mp R T molar_mass")
-        values = [u_mp, R, T, Molar_mass]
-        self._vars = {name: Variable(sym, val) for name, sym, val in
-                      zip(['u_mp', 'R', 'T', 'molar_mass'], symbols, values)}
+    def __init__(self, *, u_mp=None, R=Constants.R_J, T=None, M=None):
+        super().__init__(u_mp, R, T, M)
 
-        v = self._vars
-        self.formula = sp.sqrt(2*v['R']*v['T'] / v['molar_mass']) - v['u_mp']
+        u_mp, R, T, M = self.symbols
+
+        self.formula = u_mp - (sp.sqrt(2 * R * T / M))
 
 
 class GrahamsLow(Formula):
     """
     **Grahams Low**::
 
-        rate_2 / rate_1 = sqrt(molar mass_1 / molar mass_2)
+        rate_2 / rate_1 = sqrt(M_1 / M_2)
 
         rate       : Effuse rate
-        molar mass : Molar mass (kg/mol)
+        M : Molar mass (kg/mol)
     """
     rate_1: TYPE
     rate_2: TYPE
     molar_mass: TYPE
 
-    def __init__(self, *, rate_1=None, rate_2=None, molar_mass_1=None, molar_mass_2=None):
-        symbols = sp.symbols("rate_1 rate_2 molar_mass_1 molar_mass_2")
-        values = [rate_1, rate_2, molar_mass_1, molar_mass_2]
-        self._vars = {name: Variable(sym, val) for name, sym, val in
-                      zip(['rate_1', 'rate_2', 'molar_mass_1', 'molar_mass_2'], symbols, values)}
+    def __init__(self, *, rate_1=None, rate_2=None, M_1=None, M_2=None):
+        super().__init__(rate_1, rate_2, M_1, M_2)
 
-        v = self._vars
-        self.formula = v['rate_2'] / v['rate_1'] - sp.sqrt(v['molar_mass_1'] / v['molar_mass_2'])
+        rate_1, rate_2, M_1, M_2 = self.symbols
+
+        self.formula = rate_2 / rate_1 - sp.sqrt(M_1 / M_2)
 
 
 class PressureConversion:
@@ -438,32 +419,20 @@ class EnergyConversion:
     J_per_kJ = 1000              # 1 kJ = 1000 J
 
     # --- To Joules ---
-    @staticmethod
-    def eV_to_J(eV): return eV * EnergyConversion.J_per_eV
-    @staticmethod
-    def cal_to_J(cal): return cal * EnergyConversion.J_per_cal
-    @staticmethod
-    def kcal_to_J(kcal): return kcal * EnergyConversion.J_per_kcal
-    @staticmethod
-    def Wh_to_J(Wh): return Wh * EnergyConversion.J_per_Wh
-    @staticmethod
-    def kWh_to_J(kWh): return kWh * EnergyConversion.J_per_kWh
-    @staticmethod
-    def kJ_to_J(kJ): return kJ * EnergyConversion.J_per_kJ
+    def eV_to_J(self, eV): return eV * self.J_per_eV
+    def cal_to_J(self, cal): return cal * self.J_per_cal
+    def kcal_to_J(self, kcal): return kcal * self.J_per_kcal
+    def Wh_to_J(self, Wh): return Wh * self.J_per_Wh
+    def kWh_to_J(self, kWh): return kWh * self.J_per_kWh
+    def kJ_to_J(self, kJ): return kJ * self.J_per_kJ
 
     # --- From Joules ---
-    @staticmethod
-    def J_to_eV(J): return J / EnergyConversion.J_per_eV
-    @staticmethod
-    def J_to_cal(J): return J / EnergyConversion.J_per_cal
-    @staticmethod
-    def J_to_kcal(J): return J / EnergyConversion.J_per_kcal
-    @staticmethod
-    def J_to_Wh(J): return J / EnergyConversion.J_per_Wh
-    @staticmethod
-    def J_to_kWh(J): return J / EnergyConversion.J_per_kWh
-    @staticmethod
-    def J_to_kJ(J): return J / EnergyConversion.J_per_kJ
+    def J_to_eV(self, J): return J / self.J_per_eV
+    def J_to_cal(self, J): return J / self.J_per_cal
+    def J_to_kcal(self, J): return J / self.J_per_kcal
+    def J_to_Wh(self, J): return J / self.J_per_Wh
+    def J_to_kWh(self, J): return J / self.J_per_kWh
+    def J_to_kJ(self, J): return J / self.J_per_kJ
 
 
 class GibbsFreeEnergy(Formula):
@@ -483,13 +452,11 @@ class GibbsFreeEnergy(Formula):
     S: TYPE
 
     def __init__(self, G=None, H=None, T=None, S=None):
-        symbols = sp.symbols('G H T S')
-        values = [G, H, T, S]
-        self._vars = {name: Variable(sym, val) for name, sym, val in
-                      zip(['G', 'H', 'T', 'S'], symbols, values)}
+        super().__init__(G, H, T, S)
 
-        v = self._vars
-        self.formula = v['H'] - v['T']*v['S'] - v['G']
+        G, H, T, S = self.symbols
+
+        self.formula = G - (H - T*S)
 
 
 class FreeEnergy(Formula):
@@ -509,13 +476,11 @@ class FreeEnergy(Formula):
     K_p: TYPE
 
     def __init__(self, G=None, R=Constants.R_J, T=None, K_p=None):
-        symbols = sp.symbols('G R T K_p')
-        values = [G, R, T, K_p]
-        self._vars = {name: Variable(sym, val) for name, sym, val in
-                      zip(['G', 'R', 'T', 'K_p'], symbols, values)}
+        super().__init__(G, R, T, K_p)
 
-        v = self._vars
-        self.formula = -1 * v['R'] * v['T'] * sp.log(v['K_p'].symbol) - v['G']
+        G, R, T, K_p = self.symbols
+
+        self.formula = G - (R * T * sp.log(K_p))
 
 
 class PhotonEnergy(Formula):
@@ -976,5 +941,3 @@ class NernstEquation(Formula):
         E, E_o, R, T, n, F, Q = self.symbols
 
         self.formula = E - (E_o - R*T / (n*F) * sp.log(Q, 10))
-
-
